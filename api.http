@@ -1,0 +1,35 @@
+### Primeiro teste
+POST http://localhost:3333/trips
+Content-Type: application/json
+
+{
+    "destination": "Florianópolis",
+    "starts_at": "2024-06-01 18:00:00",
+    "ends_at": "2024-06-15 18:00:00"
+}
+
+### Verificar se as datas são válidas
+POST http://localhost:3333/trips
+Content-Type: application/json
+
+{
+    "destination": "Florianópolis",
+    "starts_at": "2024-07-10 18:00:00",
+    "ends_at": "2024-07-08 18:00:00"
+}
+
+### Teste do nodemailer
+POST http://localhost:3333/trips
+Content-Type: application/json
+
+{
+    "destination": "Florianópolis",
+    "starts_at": "2024-07-20 18:00:00",
+    "ends_at": "2024-07-30 18:00:00",
+    "owner_name": "ryandvl",
+    "owner_email": "contact@ryandvl.com",
+    "emails_to_invite": [
+        "ryandvl@gmail.com",
+        "johndoe@gmail.com"
+    ]
+}
