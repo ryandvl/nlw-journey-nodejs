@@ -48,3 +48,30 @@ GET http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56/activities
 
 ### Pegar a lista de links
 GET http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56/links
+
+### Pegar a lista de participantes
+GET http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56/participants
+
+### Criar convite
+POST http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56/invites
+Content-Type: application/json
+
+{
+    "email": "contact@ryandvl.com"
+}
+
+### Atualizar viagem
+PUT http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56
+Content-Type: application/json
+
+{
+    "destination": "São Paulo",
+    "starts_at": "2024-07-20 18:00:00",
+    "ends_at": "2024-07-30 18:00:00"
+}
+
+### Pegar as informações da viagem
+GET http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56
+
+### Pegar as informações de um participante
+GET http://localhost:3333/participants/6fa5a61f-c3de-4385-8fff-850797c927cf
