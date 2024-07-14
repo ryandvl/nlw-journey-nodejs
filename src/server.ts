@@ -32,19 +32,18 @@ app.setSerializerCompiler(serializerCompiler);
 
 app.setErrorHandler(errorHandler);
 
-app.register(createTrip);
-app.register(confirmTrip);
 app.register(confirmParticipant);
+app.register(confirmTrip);
 app.register(createActivity);
-app.register(getActivities);
-app.register(createLink);
-app.register(getLinks);
-app.register(getParticipants);
 app.register(createInvite);
-app.register(updateTrip);
+app.register(createLink);
+app.register(createTrip);
+app.register(getActivities);
+app.register(getLinks);
+app.register(getParticipant);
+app.register(getParticipants);
 app.register(getTripDetails);
-app.register(getParticipant);
-app.register(getParticipant);
+app.register(updateTrip);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("Server running on PORT 3333!");

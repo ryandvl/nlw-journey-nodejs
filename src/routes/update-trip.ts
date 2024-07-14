@@ -8,7 +8,7 @@ import { prisma } from "../lib/prisma";
 import { ClientError } from "../errors/client-error";
 
 export async function updateTrip(app: FastifyInstance) {
-  app.withTypeProvider<ZodTypeProvider>().post(
+  app.withTypeProvider<ZodTypeProvider>().put(
     "/trips/:tripId",
     {
       schema: {

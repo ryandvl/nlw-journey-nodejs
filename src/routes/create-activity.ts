@@ -8,7 +8,7 @@ import { prisma } from "../lib/prisma";
 import { ClientError } from "../errors/client-error";
 
 export async function createActivity(app: FastifyInstance) {
-  app.withTypeProvider<ZodTypeProvider>().get(
+  app.withTypeProvider<ZodTypeProvider>().post(
     "/trips/:tripId/activities",
     {
       schema: {

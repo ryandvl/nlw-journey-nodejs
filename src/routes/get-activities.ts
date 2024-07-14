@@ -54,7 +54,7 @@ export async function getActivities(app: FastifyInstance) {
         };
       });
 
-      return { activities: trip.activities };
+      return { activities };
     }
   );
 }

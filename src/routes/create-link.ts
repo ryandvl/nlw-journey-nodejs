@@ -7,7 +7,7 @@ import { prisma } from "../lib/prisma";
 import { ClientError } from "../errors/client-error";
 
 export async function createLink(app: FastifyInstance) {
-  app.withTypeProvider<ZodTypeProvider>().get(
+  app.withTypeProvider<ZodTypeProvider>().post(
     "/trips/:tripId/links",
     {
       schema: {
