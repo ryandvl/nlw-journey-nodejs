@@ -33,3 +33,18 @@ Content-Type: application/json
         "johndoe@gmail.com"
     ]
 }
+
+### Criar viagem
+POST http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56/activities
+Content-Type: application/json
+
+{
+    "title": "Academia",
+    "occurs_at": "2024-07-11 09:00:00"
+}
+
+### Pegar a lista de atividadades
+GET http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56/activities
+
+### Pegar a lista de links
+GET http://localhost:3333/trips/06d6c90b-5f94-471b-8c60-c3581f2dab56/links
