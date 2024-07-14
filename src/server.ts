@@ -24,7 +24,7 @@ import { env } from "./env";
 const app = fastify();
 
 app.register(cors, {
-  origin: "*", // SOMENTE EM DESENVOLVIMENTO!
+  origin: env.WEB_BASE_URL,
 });
 
 app.setValidatorCompiler(validatorCompiler);
@@ -46,5 +46,5 @@ app.register(getTripDetails);
 app.register(updateTrip);
 
 app.listen({ port: env.PORT }).then(() => {
-  console.log("Server running on PORT 3333!");
+  console.log(`Server running on localhost:${env.PORT}!`);
 });
