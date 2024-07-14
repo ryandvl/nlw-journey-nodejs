@@ -20,6 +20,7 @@ import { getTripDetails } from "./routes/get-trip-details";
 import { updateTrip } from "./routes/update-trip";
 import { errorHandler } from "./error-handler";
 import { env } from "./env";
+import { deleteLink } from "./routes/delete-link";
 
 const app = fastify();
 
@@ -38,6 +39,7 @@ app.register(createActivity);
 app.register(createInvite);
 app.register(createLink);
 app.register(createTrip);
+app.register(deleteLink);
 app.register(getActivities);
 app.register(getLinks);
 app.register(getParticipant);
